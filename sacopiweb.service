@@ -1,0 +1,15 @@
+ 
+[Unit]
+Description=Raspberry web sacopi controller 
+After=network-online.target
+ 
+[Service]
+ExecStart=/usr/bin/python /home/pi/sacopi/server/server.py
+WorkingDirectory=/home/pi/sacopi/server/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+ 
+[Install]
+WantedBy=multi-user.target

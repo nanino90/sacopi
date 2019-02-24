@@ -1,0 +1,15 @@
+ 
+[Unit]
+Description=Raspberry web sacopi controller 
+After=network-online.target
+ 
+[Service]
+ExecStart=/bin/bash "echo hi"
+WorkingDirectory=/home/pi/sacopi/server/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=dani
+ 
+[Install]
+WantedBy=multi-user.target
